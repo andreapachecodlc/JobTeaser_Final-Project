@@ -61,12 +61,40 @@ The initial datasets we received were stored in BigQuery and comprised three key
 
 To detect duplicates, we used the following SQL query:
 
-sql
-Copy code
--- Example SQL code for identifying duplicates in candidate_status_update
+```
+SELECT
+user_id
+, receive_time
+, shortlist_id
+, status_update
+, cause, school_id
+, current_sign_in_at
+, COUNT(*) as duplicate_count
+FROM `candidate_status_update`
+GROUP BY user_id, receive_time, shortlist_id, status_update, cause, school_id, current_sign_in_at
+HAVING COUNT(*) > 1;
+```
+
 After identifying the duplicate rows, we removed them, retaining only one unique instance of each record. This was done using the following SQL query:
 
-sql
-Copy code
--- Example SQL code for removing duplicates in candidate_status_update
+```
+CREATE OR REPLACE TABLE `candidate_status_update_cleaned` AS
+WITH CTE AS (
+  SELECT *,
+         ROW_NUMBER() OVER (PARTITION BY user_id, receive_time, shortlist_id, status_update, cause, school_id, current_sign_in_at
+                            ORDER BY user_id) AS rn
+  FROM `candidate_status_update`
+)
+SELECT
+user_id
+, receive_time
+, shortlist_id
+, status_update
+, cause
+, school_id
+, current_sign_in_at
+FROM CTE
+WHERE rn = 1
+```
+
 Once the datasets were cleaned and duplicates were removed, we exported the final versions to CSV format for further analysis.

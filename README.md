@@ -119,7 +119,7 @@ Following data preparation, we carried out an Exploratory Data Analysis (EDA) an
 
 ### **Preliminary Funnel Analysis:**
 
-![Alt text](Preliminary Funnel Analysis.png)
+![Preliminary Funnel Analysis](Preliminary%Funnel%Analysis.png)
 
 Our analysis identified two key bottlenecks in the candidate funnel:
 
@@ -128,13 +128,13 @@ The second bottleneck is at the company response stage, where there is a signifi
 
 ### **Distribution of Status Updates:**
 
-![Alt text](Distribution of status updates.png)
+![Distribution of Status Updates](Distribution%of%status%updates.png)
 
 We observed that a large percentage of candidates are categorized as "Not Interested," suggesting a possible disconnect between job opportunities and candidate preferences.
 
 ### **User Count Over Time:**
 
-![User count over time](User count over time.png)
+![User count over time](User%count%over%time.png)
 
 This visualization highlighted a noticeable increase in user activity during September and October. A possible hypothesis for this trend is that, in Europe, more job seekers become active during this period, possibly due to the academic calendar and post-summer job search activity.
 

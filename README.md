@@ -73,7 +73,7 @@ user_id
 FROM `candidate_status_update`
 GROUP BY user_id, receive_time, shortlist_id, status_update, cause, school_id, current_sign_in_at
 HAVING COUNT(*) > 1;
-```
+```sql
 
 After identifying the duplicate rows, we removed them, retaining only one unique instance of each record. This was done using the following SQL query:
 
@@ -95,6 +95,6 @@ user_id
 , current_sign_in_at
 FROM CTE
 WHERE rn = 1
-```
+```sql
 
 Once the datasets were cleaned and duplicates were removed, we exported the final versions to CSV format for further analysis.

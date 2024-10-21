@@ -119,7 +119,7 @@ Following data preparation, we carried out an Exploratory Data Analysis (EDA) an
 
 ### **Preliminary Funnel Analysis:**
 
-![Preliminary Funnel Analysis]([Preliminary%Funnel%Analysis.png](https://private-user-images.githubusercontent.com/118401647/378271086-abb704c9-757d-4e99-9a2c-3dba91999c9a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0ODQzMzcsIm5iZiI6MTcyOTQ4NDAzNywicGF0aCI6Ii8xMTg0MDE2NDcvMzc4MjcxMDg2LWFiYjcwNGM5LTc1N2QtNGU5OS05YTJjLTNkYmE5MTk5OWM5YS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAyMVQwNDEzNTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00NzcyNDNkMThlZmM1OWZmMjkwNGI5Mzg4MjQyMDEwZGNkNmIzYTk4MmYzNWY2ZWM1N2IwYWMwYzlhYzRlZTA0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.RrqtGZT6ZKAIAJ-6h3IgDbF-BwJo59IamHj_6HptTng))
+![funnel](https://github.com/user-attachments/assets/016d1932-032f-4d14-8722-4f9915f9e583)
 
 Our analysis identified two key bottlenecks in the candidate funnel:
 
@@ -128,13 +128,13 @@ The second bottleneck is at the company response stage, where there is a signifi
 
 ### **Distribution of Status Updates:**
 
-![Distribution of Status Updates](Distribution%of%status%updates.png)
+![status](https://github.com/user-attachments/assets/0c94502e-9d4f-4e02-ae7e-4572f2c5ff19)
 
 We observed that a large percentage of candidates are categorized as "Not Interested," suggesting a possible disconnect between job opportunities and candidate preferences.
 
 ### **User Count Over Time:**
 
-![User count over time](User%count%over%time.png)
+![overtime](https://github.com/user-attachments/assets/3bcb5664-d555-4ccc-a6e2-269fb673a1a9)
 
 This visualization highlighted a noticeable increase in user activity during September and October. A possible hypothesis for this trend is that, in Europe, more job seekers become active during this period, possibly due to the academic calendar and post-summer job search activity.
 

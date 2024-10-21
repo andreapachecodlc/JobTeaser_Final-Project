@@ -134,7 +134,7 @@ We observed that a large percentage of candidates are categorized as "Not Intere
 
 ### **User Count Over Time:**
 
-![Alt text](User Count Over Time.png)
+![User count over time](User count over time.png)
 
 This visualization highlighted a noticeable increase in user activity during September and October. A possible hypothesis for this trend is that, in Europe, more job seekers become active during this period, possibly due to the academic calendar and post-summer job search activity.
 

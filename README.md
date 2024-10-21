@@ -98,3 +98,55 @@ WHERE rn = 1
 ```
 
 Once the datasets were cleaned and duplicates were removed, we exported the final versions to CSV format for further analysis.
+
+## **4. Exploratory Data Analysis and Preliminary Visualization**
+Following data preparation, we carried out an Exploratory Data Analysis (EDA) and created a set of preliminary visualizations using Python. The code for this analysis is detailed within the notebook, but due to display limitations, the key visualizations have been included here.
+
+### **Preliminary Funnel Analysis:**
+
+
+Our analysis identified two key bottlenecks in the candidate funnel:
+
+The first bottleneck occurs at the shortlist stage, where many candidates fail to advance.
+The second bottleneck is at the company response stage, where there is a significant drop in recruiter engagement.
+### **Distribution of Status Updates:**
+We observed that a large percentage of candidates are categorized as "Not Interested," suggesting a possible disconnect between job opportunities and candidate preferences.
+
+### **User Count Over Time:**
+This visualization highlighted a noticeable increase in user activity during September and October. A possible hypothesis for this trend is that, in Europe, more job seekers become active during this period, possibly due to the academic calendar and post-summer job search activity.
+
+For more detailed visual analysis, we utilized Power BI, where we expanded the insights through an interactive dashboard.
+
+## **5. Conclusions and Recommendations**
+### **Conclusions:**
+- **Imbalance between supply and demand:**
+There is a notable discrepancy between the number of job offers and the number of candidates actively engaging with them, which may be affecting the overall effectiveness of the hiring process.
+
+- **Suboptimal shortlist generation:**
+The algorithm responsible for generating shortlists is not delivering optimally sized lists, leading to inefficiencies in candidate selection.
+
+- **Two major bottlenecks in the hiring funnel:**
+Our analysis identified significant challenges in two areas:
+The shortlist stage, where many candidates are filtered out.
+The company response stage, where there is a lack of recruiter engagement.
+
+- **High rejection rate of job offers:**
+A significant number of candidates are rejecting job offers, possibly indicating a misalignment between the opportunities presented and the candidates' expectations.
+
+- **Low success rate:**
+The overall success rate of matching candidates to job opportunities is low, indicating a need for optimization in both the candidate and recruiter sides of the platform.
+
+### **Recommendations:**
+- **Investigate job offer rejections:**
+Further analysis is needed to understand the reasons behind the high rate of job offer rejections. This could help in adjusting the matching process to better align with candidate preferences.
+
+- **Refine the shortlist generation algorithm:**
+We recommend adjusting the algorithm that generates shortlists to ensure they are better tailored to the needs of both recruiters and candidates, which should improve the quality and efficiency of matches.
+
+- **Introduce a feedback system:**
+Implementing a feedback mechanism to gather input from both candidates and recruiters could provide valuable insights into pain points within the hiring process, helping to inform future platform improvements.
+
+- **Develop strategic partnerships with talent-seeking companies:**
+Establishing partnerships with companies actively searching for talent would not only enhance engagement but also improve the overall placement success rate on the platform.
+
+

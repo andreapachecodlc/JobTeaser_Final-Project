@@ -1,4 +1,4 @@
-# JobTeaser Final Project
+# **JobTeaser Final Project**
 Le Wagon - Data Analytics Final Project: A comprehensive data analytics project developed as the final assessment for the Le Wagon Data Analytics Bootcamp. The project includes data exploration, preprocessing, machine learning, and visualization, applying key concepts learned throughout the course.
 
 ## **1. Introduction:**
@@ -63,16 +63,26 @@ To detect duplicates, we used the following SQL query:
 
 ```sql
 SELECT
-user_id
-, receive_time
-, shortlist_id
-, status_update
-, cause, school_id
-, current_sign_in_at
-, COUNT(*) as duplicate_count
-FROM `candidate_status_update`
-GROUP BY user_id, receive_time, shortlist_id, status_update, cause, school_id, current_sign_in_at
-HAVING COUNT(*) > 1;
+    user_id,
+    receive_time,
+    shortlist_id,
+    status_update,
+    cause,
+    school_id,
+    current_sign_in_at,
+    COUNT(*) AS duplicate_count
+FROM
+    `candidate_status_update`
+GROUP BY
+    user_id,
+    receive_time,
+    shortlist_id,
+    status_update,
+    cause,
+    school_id,
+    current_sign_in_at
+HAVING
+    COUNT(*) > 1
 ```
 
 After identifying the duplicate rows, we removed them, retaining only one unique instance of each record. This was done using the following SQL query:
@@ -80,21 +90,26 @@ After identifying the duplicate rows, we removed them, retaining only one unique
 ```sql
 CREATE OR REPLACE TABLE `candidate_status_update_cleaned` AS
 WITH CTE AS (
-  SELECT *,
-         ROW_NUMBER() OVER (PARTITION BY user_id, receive_time, shortlist_id, status_update, cause, school_id, current_sign_in_at
-                            ORDER BY user_id) AS rn
-  FROM `candidate_status_update`
+    SELECT *,
+           ROW_NUMBER() OVER (
+               PARTITION BY user_id, receive_time, shortlist_id, status_update, cause, school_id, current_sign_in_at
+               ORDER BY user_id
+           ) AS rn
+    FROM
+        `candidate_status_update`
 )
 SELECT
-user_id
-, receive_time
-, shortlist_id
-, status_update
-, cause
-, school_id
-, current_sign_in_at
-FROM CTE
-WHERE rn = 1
+    user_id,
+    receive_time,
+    shortlist_id,
+    status_update,
+    cause,
+    school_id,
+    current_sign_in_at
+FROM
+    CTE
+WHERE
+    rn = 1
 ```
 
 Once the datasets were cleaned and duplicates were removed, we exported the final versions to CSV format for further analysis.

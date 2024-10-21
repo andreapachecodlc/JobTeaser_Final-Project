@@ -1,5 +1,5 @@
 # JobTeaser Final Project
-Le Wagon - Data Analytics Final Project: A comprehensive data analytics project developed as the final assessment for the Le Wagon Data Analytics bootcamp. The project includes data exploration, preprocessing, machine learning, and visualization, applying key concepts learned throughout the course.
+Le Wagon - Data Analytics Final Project: A comprehensive data analytics project developed as the final assessment for the Le Wagon Data Analytics Bootcamp. The project includes data exploration, preprocessing, machine learning, and visualization, applying key concepts learned throughout the course.
 
 ## **1. Introduction:**
 ### **Context:**
@@ -21,39 +21,52 @@ Analyzing this funnel will help the product team improve the job placement of th
 ### **Project goal:**
 The goal of this project is to analyze and optimize the JobTeaser job placement funnel by identifying bottlenecks in the current process and suggesting improvements to increase student engagement and job matches.
 
-### **Data Overview:**
+## **2. Data Overview:**
 This analysis uses three key datasets:
 #### **Opt-in Table (optin):**
  Contains data about students opting in or out of JobTeaser services.
 
-- **user_id**: ID del estudiante.
-- **receive_time**: Fecha/hora de opt-in/out.
-- **cause**: Razón (manual o automático).
-- **active**: `TRUE` si opt-in, `FALSE` si no.
-- **school_id**: ID de la escuela.
-- **current_sign_in_at**: Última conexión.
-- **resume_uploaded**: CV subido.
+- **user_id:** ID of the student.
+- **receive_time:** Date/time of opt-in/out.
+- **cause:** Reason (manual or automatic).
+- **active:** TRUE if opted in, FALSE if opted out.
+- **school_id:** ID of the school.
+- **current_sign_in_at:** Last login time.
+- **resume_uploaded:** Whether the CV was uploaded.
 
 #### **Candidate Status Update (candidate_status_update):**
 Tracks students' status updates within the job application process.
 
-- **user_id**: ID del estudiante.
-- **receive_time**: Fecha/hora del evento.
-- **shortlist_id**: ID de Shortlist.
-- **status_update**: Estado (estudiante: `awaiting`, `interested`, `not interested`; empresa: `approved`, `declined`).
-- **cause**: Razón (click o timeout).
-- **school_id**: ID de la escuela.
-- **current_sign_in_at**: Última conexión.
+- **user_id**: ID of the student.
+- **receive_time**: Date/time of the event.
+- **shortlist_id**: ID of the shortlist.
+- **status_update**: Status (estudiante: `awaiting`, `interested`, `not interested`; empresa: `approved`, `declined`).
+- **cause**: Reason (click or timeout).
+- **school_id**: ID of the school.
+- **current_sign_in_at**: Last login time.
+
 
 #### **School Info Table (dim_schools):**
 Provides data about the schools participating in JobTeaser's services.
 
-- **school_id**: ID de la escuela.
-- **is_cc**: Centro de carreras o sitio público.
-- **intranet_school_id**: ID del centro de carreras si aplica.
-- **jt_country**: País de la escuela.
-- **jt_intranet_status**: Estado "launched" para centro de carreras.
-- **jt_school_type**: Tipo de escuela (1: Ingenierías, 2: Negocios, 3: Otras).
+- **school_id:** ID of the school.
+- **is_cc:** Career center or public site.
+- **intranet_school_id:** ID of the career center, if applicable.
+- **jt_country:** Country of the school.
+- **jt_intranet_status:** Status "launched" for career centers.
+- **jt_school_type:** Type of school (1: Engineering, 2: Business, 3: Other).
 
+## **3.Data preparation**
+The initial datasets we received were stored in BigQuery and comprised three key tables. Before transitioning to the analysis in Python, we performed a thorough inspection of all three tables to identify and address any duplicate records. The SQL queries used for this process were applied to each of the tables. Below, we present the example of one of the tables (candidate_status_update), but the same process was followed for the other two.
 
+To detect duplicates, we used the following SQL query:
 
+sql
+Copy code
+-- Example SQL code for identifying duplicates in candidate_status_update
+After identifying the duplicate rows, we removed them, retaining only one unique instance of each record. This was done using the following SQL query:
+
+sql
+Copy code
+-- Example SQL code for removing duplicates in candidate_status_update
+Once the datasets were cleaned and duplicates were removed, we exported the final versions to CSV format for further analysis.

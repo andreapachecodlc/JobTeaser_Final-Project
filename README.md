@@ -5,7 +5,7 @@ Le Wagon - Data Analytics Final Project: A comprehensive data analytics project 
 ### **Context:**
 **JobTeaser** is a platform that connects students and companies by managing career services for over 750 universities globally. It provides a **matching tool** where companies can shortlist students for job opportunities. Optimizing the job placement funnel is critical to enhancing student employment rates and improving the platform's efficiency.
 
-**Job placement funnel:**
+**Job Placement Funnel:**
 The job placement funnel is:
 - opt-in (student activate a toggle "looking for opportunities")
 - opt-in qualified (students upload their CV)
@@ -18,7 +18,7 @@ The job placement funnel is:
 Analyzing this funnel will help the product team improve the job placement of the users.
 
 
-### **Project goal:**
+### **Project Goal:**
 The goal of this project is to analyze and optimize the JobTeaser job placement funnel by identifying bottlenecks in the current process and suggesting improvements to increase student engagement and job matches.
 
 ## **2. Data Overview:**
@@ -56,7 +56,7 @@ Provides data about the schools participating in JobTeaser's services.
 - **jt_intranet_status:** Status "launched" for career centers.
 - **jt_school_type:** Type of school (1: Engineering, 2: Business, 3: Other).
 
-## **3.Data preparation**
+## **3.Data Preparation**
 The initial datasets we received were stored in BigQuery and comprised three key tables. Before transitioning to the analysis in Python, we performed a thorough inspection of all three tables to identify and address any duplicate records. The SQL queries used for this process were applied to each of the tables. Below, we present the example of one of the tables (candidate_status_update), but the same process was followed for the other two.
 
 To detect duplicates, we used the following SQL query:
@@ -140,7 +140,11 @@ This visualization highlighted a noticeable increase in user activity during Sep
 
 For more detailed visual analysis, we utilized Power BI, where we expanded the insights through an interactive dashboard.
 
-## **5. Conclusions and Recommendations**
+## **5. Machine Learning Approach: Predicting Candidate Success**
+
+The detailed steps followed to develop the classification model and the results are explained in [See notebook](https://url-del-notebook.com)
+
+## **6. Conclusions and Recommendations**
 ### **Conclusions:**
 - **Imbalance between supply and demand:**
 There is a notable discrepancy between the number of job offers and the number of candidates actively engaging with them, which may be affecting the overall effectiveness of the hiring process.

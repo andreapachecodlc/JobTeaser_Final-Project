@@ -1,4 +1,4 @@
-# **JobTeaser Final Project**
+# **JobTeaser: Job Placement Funnel Optimization**
 Le Wagon - Data Analytics Final Project: A comprehensive data analytics project developed as the final assessment for the Le Wagon Data Analytics Bootcamp. The project includes data exploration, preprocessing, machine learning, and visualization, applying key concepts learned throughout the course.
 
 ## **1. Introduction:**

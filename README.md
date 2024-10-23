@@ -142,7 +142,7 @@ For more detailed visual analysis, we utilized Power BI, where we expanded the i
 
 ## **5. Machine Learning Approach: Predicting Candidate Success**
 
-The detailed steps followed to develop the classification model and the results are explained in [See notebook](https://url-del-notebook.com)
+The detailed steps followed to develop the classification model and the results are explained in [JobTeaser EDA and Machine Learning](JobTeaser EDA and Machine Learning.ipynb)
 
 ## **6. Conclusions and Recommendations**
 ### **Conclusions:**
